@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEnSRS Support Agent</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f5f7fa;
+      color:#222;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+      padding:40px;
+      background:linear-gradient(135deg,#1a5c2a,#2d8a3e);
+      color:white;
+    }
+
+    .hero h1{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:700px;
+      font-size:18px;
+      line-height:1.7;
+      opacity:0.95;
+    }
+
+    .hero .btn{
+      margin-top:30px;
+      padding:14px 28px;
+      background:#c8a84b;
+      color:#1a1a1a;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.2s;
+    }
+
+    .hero .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .features{
+      padding:80px 20px;
+      background:white;
+    }
+
+    .features h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#1a5c2a;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .card{
+      background:#f9f9f9;
+      padding:30px;
+      border-radius:14px;
+      border:1px solid #eee;
+      transition:0.2s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#1a5c2a;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#1a5c2a;
+      color:white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>SEnSRS Support Agent</h1>
+
+    <p>
+      Welcome to the SEnSRS Centre of Excellence at IIT Ropar.
+      Our AI-powered support assistant can help answer questions
+      related to research, programs, activities, and more.
+    </p>
+
+    <a href="https://sensrs.com/" class="btn">
+      Visit Official Website
+    </a>
+  </section>
+
+  <section class="features">
+    <h2>What Our Assistant Can Help With</h2>
+
+    <div class="feature-grid">
+
+      <div class="card">
+        <h3>Research Information</h3>
+        <p>
+          Learn about AI, IoT, sensor systems, environmental monitoring,
+          and ongoing SEnSRS research initiatives.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>IIT Ropar Details</h3>
+        <p>
+          Ask questions related to IIT Ropar programs, facilities,
+          campus, and academic activities.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>24/7 AI Support</h3>
+        <p>
+          The chatbot is available anytime to assist visitors and students
+          with quick information.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 SEnSRS · IIT Ropar
+  </footer>
+
+  <!-- CHATBOT SCRIPT -->
+  <script src="sensrs-chatbot.js"></script>
+
+  <!-- INITIALIZE CHATBOT -->
+  <script>
+    SEnSRSChat.init({
+      geminiApiKey: 'AIzaSyAw4A88hvyNhy-2PmsMACDQuvwAaKVpnmw',
+      websiteUrl: 'https://sensrs.com/'
+    });
+  </script>
+
+</body>
+</html>
